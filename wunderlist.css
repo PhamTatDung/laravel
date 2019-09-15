@@ -1,0 +1,345 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+html,body{
+	font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+	width: 100%;
+	height: 100%;
+	background: url(img/background.jpg) no-repeat;
+	overflow: hidden;
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.left{
+	width: 280px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.center{
+	flex-grow: 1;
+	flex-shrink: 2;
+	display: flex;
+	flex-direction: column;
+}
+.right{
+	width: 367px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+.searchToolbar, .userToolbar{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	background-color: #5b7a59;
+}
+.userToolbar{
+	background-color: #f7f7f7;
+}
+.addList{
+	width: 100%;
+	height: 42px;
+	background-color: #f7f7f7;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	display: flex;
+}
+.list{
+	flex-grow: 1;
+	background-color: #f7f7f7;
+}
+.toggleButton,.searchIcon, .addList .icon{
+	width: 42px;
+	height: 100%;
+}
+.searchIcon svg, .toggleButton svg,.addList .icon svg{
+	fill: #fff;
+	margin: 12px 11px;
+}
+.addList .icon svg{
+	fill: #328AD6;
+}
+.addList .text{
+	line-height: 42px;
+	color: #328AD6;
+	flex-grow: 1;
+}
+.searchIcon svg:nth-child(2){
+	display: none;
+}
+.searchInput{
+	flex-grow: 1;
+}
+.searchInput input{
+	width: 100%;
+	height: 100%;	
+	background-color: #5b7a59;
+	border: none;
+	font-size: 15px;
+	color: #fff;
+}
+:focus{
+	outline: 0;
+}
+.userToolbar .icon{
+	width: 80px;
+	display: flex;
+}
+.userToolbar .user{
+	flex-grow: 1;
+	display: flex;
+	line-height: 45px;
+}
+.userToolbar .icon svg{
+	fill: #737272;
+	margin: 12px 10px;
+}
+.userToolbar .user img{
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	margin: 7px;
+}
+.userToolbar .user svg{
+	margin: 12px 7px;
+}
+.listScroll ul{
+	width: 100%;
+	height: auto;
+}
+.listScroll ul li{
+	width: 100%;
+	height: 38px;
+	display: flex;
+	line-height: 38px;
+}
+.listScroll ul li svg{
+	margin: 9px;
+}
+.listScroll ul li svg.inbox{
+	fill: #2b8dec;
+}
+.listScroll ul li svg.today{
+	fill: #5fa004;
+}
+.listScroll ul li svg.week{
+	fill: #e29600;
+}
+.listScroll ul li svg.list-item{
+	fill: #b9b9b9;
+}
+.listToolbar{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	background-color: #668964;
+}
+.listToolbar .title{
+	line-height: 45px;
+	flex-grow: 1;
+}
+.listToolbar .icon{
+	width: 156px;
+	height: 100%;
+	display: flex;
+}
+.listToolbar .title h1{
+	font-size: 20px;
+	margin-left: 14px;
+	color: #f5ffff;
+	font-weight: normal;
+}
+.listToolbar .icon div{
+	display: flex;
+	flex-direction: column;
+	width: 52px;
+	height: 100%;
+}
+.listToolbar .icon div span{
+	font-size: 12px;
+	text-align: center;
+	color: #f5ffff;
+}
+.listToolbar .icon div svg{
+	margin: 4px 16px 0px;
+	fill: #f5ffff; 
+}
+.taskScroll{
+	flex-grow: 1;
+	margin: 0px 14px;
+}
+.addTodo{
+	width: 100%;
+	height: 47px;
+	background-color: #809875;
+	margin: 14px 0px;
+	border-radius: 5px;
+	display: flex;
+}
+.addTodo svg{
+	margin: 14px;
+	fill: #d5dfd5;
+}
+.addTodo svg.speech, .addTodo svg.today, .addTodo svg.star{
+	display: none;
+}
+.addTodo input{
+	flex-grow: 1;
+	font-size: 16px;
+	background-color: #809875;
+	color:  #d5dfd5;
+}
+.addTodo input::placeholder{
+	color: #d5dfd5;
+}
+.task,.taskDone,{
+	width: 100%;
+	height: auto;
+}
+.task ul,.taskDone ul{
+	width: 100%;
+	height: 100%;
+}
+.task ul li,.taskDone ul li{
+	width: 100%;
+	height: 46px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 1px 0px;
+	list-style-type: none;
+	display: flex;
+	line-height: 46px;
+}
+.taskDone ul li{
+	opacity: 0.5;
+}
+.task ul li svg.task-check, .right .title svg.task-check{
+	border: 1px solid #929ea5;
+	box-sizing: border-box;	
+	border-radius: 3px;
+	margin: 14px;
+}
+.task ul li svg.starred, .taskDone ul li svg.starred, .right .title svg.starred{
+	fill:#d74e48;
+	margin: 0px 13px;
+	display: none;
+}
+.task ul li span,.taskDone ul li span, .right .title span{
+	flex-grow: 1;
+}
+.taskDone ul li span{
+	text-decoration: line-through;
+}
+.task ul li svg.star,.taskDone ul li svg, .right .title svg.star{
+	margin: 13px;
+	fill: #c0c0c0;
+}
+.showTodo{
+	width: 187px;
+	height: 22px;
+	background: rgb(134, 159, 124);
+	margin: 20px 0px;
+	text-align: center;
+	line-height: 18px;
+	border-radius: 3px;
+}
+.showTodo a{
+	font-size: 11px;
+	color: #fff;
+	text-decoration: none;
+}
+.right .title{
+	width: 100%;
+	height: 55px;
+	display: flex;
+	line-height: 55px;
+}
+.right .title svg.star, .right .title svg.task-check{
+	margin: 19px;
+}
+.right .body{
+	flex-grow: 1;
+	background-color: #f7f7f7;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+.right .body .dueDate, .right .body .Remind, .right .body .subtask div, .right .body .note, .right .body .file div{
+	display: flex;
+	width: 100%;
+	line-height: 48px;
+}
+.right .body .dueDate svg, .right .body .Remind svg, .right .body .subtask div svg, .right .body .note svg, .right .body .file div svg{
+	margin: 14px;
+	fill: #aba2ae;
+}
+.right .body .dueDate span, .right .body .Remind span, .right .body .subtask div input, .right .body .note input, .right .body .file div label{
+	flex-grow: 1;
+	border-bottom: 1px solid #ebebeb;
+	color: #aba2ae;
+}
+.right .body .subtask div input, .right .body .note input
+{
+	background-color: #f7f7f7;
+	font-size: 14px;
+}
+.right .body .subtask div input::placeholder{
+	color: #aba2ae;
+}
+.right .body .subtask{
+	width: 100%;
+	height: auto;
+}
+.right .body .subtask ul{
+	width: 100%;
+	height: auto;
+}
+.right .body .subtask ul li{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	list-style-type: none;
+	display: flex;
+}
+.right .body .subtask ul li svg.task-check{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #67ae2b;
+	border-radius: 3px;
+	margin: 7px 14px;
+}
+.right .body .subtask ul li span{
+	flex-grow: 1;
+}
+
+.right .comment, .right .detail{
+	width: 100%;
+	height: 44px;
+	display: flex;
+	line-height: 44px;
+}
+.right .comment input{
+	border: 1px solid #d6d6d6;
+	height: 32px;
+	flex-grow: 1;
+	border-radius: 3px;
+	margin: 10px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	font-size: 15px;
+}
+.right .detail svg{
+	margin: 11px;
+	fill: #666666;
+}
+.right .detail span{
+	flex-grow: 1;
+	font-size: 11px;
+	text-align: center;
+	color: #666666;
+}
