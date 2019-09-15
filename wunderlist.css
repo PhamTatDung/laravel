@@ -42,6 +42,7 @@ html,body{
 }
 .userToolbar{
 	background-color: #f7f7f7;
+	position: relative;
 }
 .addList{
 	width: 100%;
@@ -57,10 +58,12 @@ html,body{
 .toggleButton,.searchIcon, .addList .icon{
 	width: 42px;
 	height: 100%;
+	cursor: pointer;
 }
 .searchIcon svg, .toggleButton svg,.addList .icon svg{
 	fill: #fff;
 	margin: 12px 11px;
+	cursor: pointer;
 }
 .addList .icon svg{
 	fill: #328AD6;
@@ -95,6 +98,7 @@ html,body{
 	flex-grow: 1;
 	display: flex;
 	line-height: 45px;
+	cursor: pointer;
 }
 .userToolbar .icon svg{
 	fill: #737272;
@@ -342,4 +346,60 @@ html,body{
 	font-size: 11px;
 	text-align: center;
 	color: #666666;
+}
+.leftSmall{
+	width: 45px;
+}
+.leftSmall .searchToolbar input,.leftSmall .searchToolbar div.searchIcon{
+	display: none;
+}
+.leftSmall .list .userToolbar .user span, .leftSmall .list .userToolbar div.icon, .leftSmall .list .userToolbar .user svg{
+	display: none;
+}
+.leftSmall .list .listScroll ul li  span{
+	display: none;
+}
+.leftSmall .addList div.text{
+	display: none;
+}
+.setting{
+	width: 224px;
+	height: auto;
+	position: absolute;
+	top: 45px;
+	left: 7px;
+	background-color: #fff;
+	border: 1px solid #f9f9f9;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	font-size: 13px;
+	display: none;
+}
+.setting ul{
+	width: 100%;
+	height: auto;
+}
+.setting ul li{
+	height: 36px;
+	line-height: 36px;
+	padding: 0px 10px;
+	list-style-type: none;
+	cursor: pointer;
+}
+.setting ul li:nth-child(1),.setting ul li:nth-child(10){
+	color: #aaaaaa;
+	cursor: auto;
+}
+.setting ul li:nth-child(2), .setting ul li:nth-child(5), .setting ul li:nth-child(9){
+	border-bottom: 1px solid #f2f2f2;
+}
+.show{
+	display: block;
+}
+.setting ul li:hover{
+	background-color: #328ad6;
+	color: #fff;
+}
+.setting ul li:nth-child(1):hover,.setting ul li:nth-child(10):hover{
+	background-color: #fff;
+	color:  #aaaaaa;
 }
