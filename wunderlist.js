@@ -28,4 +28,22 @@ $(document).ready(function() {
 	        $(".setting").removeClass("show");
 	    }
 	});
+	//////////////hiện form create List
+	$(".addList").click(function(){
+		$(".mask").show();
+		$(".formNewList").show();
+	});
+	$(".footer .cancel").click(function(){
+		$(".mask").hide();
+		$(".formNewList").hide();
+	});
+	$(".formNewList .listName input").keydown(function(){
+		var val = $(this).val();
+		if(val != ''){
+			$(".formNewList .footer .save").css("background-color", "#328ad6");
+		}
+		else{
+			$(".formNewList .footer .save").css("background-color","#96c2e8");
+		}
+	});
 });
